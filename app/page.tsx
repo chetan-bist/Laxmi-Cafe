@@ -9,7 +9,7 @@ const mapEmbedUrl =
   'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3159.070159045028!2d80.1747659!3d28.9611008!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a1ad3000eb8673%3A0x2e165f66ae17ba17!2sOlive%20Cafe!5e1!3m2!1sen!2snp!4v1795242568488!5m2!1sen!2snp'
 
 // आफ्नो WhatsApp नम्बर देशको कोड सहित राख्नुहोस्, जस्तै: 'https://wa.me/97798XXXXXXXX'
-const whatsappUrl = 'https://wa.me/'
+const whatsappUrl = 'https://wa.me/+9779800660701'
 
 function openWhatsApp(message: string) {
   window.open(`${whatsappUrl}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer')
@@ -24,7 +24,7 @@ export default function Page() {
     const type = String(data.get('type') || 'General enquiry')
     const message = String(data.get('message') || '').trim()
     openWhatsApp(
-      `Hello Laxmi Group!\n\nName: ${name}\nPhone: ${phone}\nEnquiry: ${type}\nMessage: ${message || 'I would like to know more.'}`
+      `Hello Laxmi Cafe!\n\nName: ${name}\nPhone: ${phone}\nEnquiry: ${type}\nMessage: ${message || 'I would like to know more.'}`
     )
   }
 
